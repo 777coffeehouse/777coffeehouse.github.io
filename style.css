@@ -1,0 +1,703 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #382218;
+    --secondary-color: #c8995a;
+    --accent-color: #e07e37;
+    --text-light: #f8f0e5;
+    --text-dark: #382218;
+    --background-dark: #230c01;
+    --background-light: #f8f0e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #230c01;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Page container styles */
+.page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+/* Tatlı Menü Sayfası */
+.tatli-page {
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 20px;
+}
+
+.coffee-beans {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 35%;
+    background-image: url('img/coffee-beans.jpg');
+    background-size: cover;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.tatli-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tatli-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tatli-header h1 {
+    font-size: clamp(2.8rem, 6vw, 3.2rem);
+    font-weight: 800;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.tatli-header h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 5px 0;
+}
+
+.tatli-header h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.menu-divider {
+    height: 3px;
+    background: #ff7f50;
+    margin: 20px 0;
+}
+
+.menu-items {
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+    position: relative;
+    white-space: nowrap;
+}
+
+.item-name {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.item-dots {
+    flex: 1;
+    border-bottom: 2px dotted #000;
+    margin: 0 5px;
+    position: relative;
+    top: -4px;
+}
+
+.item-price {
+    font-weight: 600;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.item-note {
+    display: block;
+    width: 100%;
+    color: #ff7f50;
+    font-size: 0.75em;
+    margin-top: 2px;
+    font-style: italic;
+    white-space: normal;
+    text-align: center;
+}
+
+/* Coffee House Menu Page */
+.coffee-page {
+    background-color: #2a1810;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {    width: 200px;    height: auto;    max-width: 100%;    border-radius: 50%;}
+
+.coffee-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.menu-columns {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.menu-column {
+    flex: 1;
+    max-width: 500px;
+    min-width: 0;
+}
+
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid;
+}
+
+.section-title.orange {
+    color: #ff7f50;
+    border-color: #ff7f50;
+}
+
+.section-title.blue {
+    color: #48c2c5;
+    border-color: #48c2c5;
+}
+
+.coffee-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.coffee-name {
+    flex: 1;
+    margin-right: 15px;
+    min-width: 150px;
+}
+
+.coffee-price {
+    white-space: nowrap;
+}
+
+.ingredients {
+    width: 100%;
+    color: #ff7f50;
+    font-size: 0.85em;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* Tea Bar Page - Match Coffee House page layout */
+.tea-page {
+    background-color: #2a1810;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tea-page .menu-columns {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.tea-page .menu-column {
+    flex: 1;
+    max-width: 500px;
+    min-width: 0;
+}
+
+.tea-section-title {
+    color: #ff7f50;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ff7f50;
+}
+
+/* Kampanya Footer */
+.kampanya-footer {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+
+}
+
+.kampanya-footer h3 {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.kampanya-footer p {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Mobile Responsiveness - Keep columns */
+@media (max-width: 768px) {
+    .tatli-page {
+        padding: 20px 15px;
+    }
+    
+    .tatli-content {
+        padding: 0 15px;
+    }
+    
+    .menu-items {
+        max-width: 100%;
+    }
+    
+    .menu-item {
+        font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+        margin-bottom: 8px;
+    }
+    
+    .item-dots {
+        margin: 0 3px;
+    }
+    
+    .coffee-beans {
+        width: 25%;
+    }
+    
+    .coffee-page,
+    .tea-page {
+        padding: 15px;
+    }
+    
+    .menu-columns {
+        gap: 20px;
+    }
+    
+    .coffee-item {
+        margin-bottom: 6px;
+        font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+    }
+    
+    .coffee-name {
+        min-width: 120px;
+        margin-right: 10px;
+    }
+    
+    .ingredients {
+        font-size: 0.75em;
+        margin-top: 2px;
+    }
+    
+    .section-title,
+    .tea-section-title {
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
+        margin-bottom: 15px;
+    }
+    
+    .coffee-title {
+        font-size: clamp(1.4rem, 3.5vw, 2rem);
+        margin-bottom: 20px;
+    }
+    
+    .logo {        width: 140px;    }
+    
+    .item-note {
+        font-size: 0.7em;
+    }
+    
+    .kampanya-footer h3 {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+    
+    .kampanya-footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Remove any navigation or control elements */
+.page-controls, .zoom-controls, nav, .nav-links {
+    display: none;
+}
+
+/* Tatlı menüsü sayfası */
+#page3 {
+    background: white;
+}
+
+.tatli-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tatli-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #382218;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.tatli-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #382218;
+    margin: 5px 0;
+}
+
+.tatli-header h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #382218;
+}
+
+.tatli-menu .menu-item {
+    color: #382218;
+}
+
+.special-note {
+    color: #e07e37;
+    font-size: 0.85rem;
+    font-style: italic;
+    display: block;
+    margin-top: 3px;
+}
+
+/* Banner stili - Sayfa 2 için özel */
+.banner {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    background-image: url('img/coffee-beans-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    position: relative;
+}
+
+.banner-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #fff;
+    margin-top: 15px;
+    letter-spacing: 2px;
+}
+
+/* Özel renkler */
+.section-title.espresso {
+    color: #e07e37;
+}
+
+.section-title.sandwich {
+    color: #48c2c5;
+}
+
+.section-title.brew {
+    color: #e07e37;
+}
+
+.section-title.ice {
+    color: #e07e37;
+}
+
+.section-title.drinks {
+    color: #e07e37;
+}
+
+.ingredients {
+    color: #c8995a;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.special-item .item-name {
+    max-width: 85%;
+}
+
+/* Footer gizlendi */
+footer {
+    display: none;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(35, 12, 1, 0.95);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--text-light);
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.menu-button {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+    background-color: rgba(200, 153, 90, 0.1);
+}
+
+/* Animation for menu items */
+.menu-item {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateX(5px);
+    background-color: rgba(200, 153, 90, 0.1);
+}
+
+/* Section transition animation */
+.menu-section {
+    transition: opacity 0.5s;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Sayfa geçiş kontrolleri */
+.page-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.page-controls button {
+    background: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.page-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Zoom kontrolü için */
+.zoom-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.zoom-controls button {
+    background: var(--secondary-color);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sayfa kontrolleri gizleme */
+.page-controls, .zoom-controls {
+    display: none;
+}
+
+.menu-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(0.95);
+    transform-origin: center center;
+}
+
+#page1 .menu-content {
+    background-image: url('menu1.jpg');
+}
+
+#page2 .menu-content {
+    background-image: url('menu2.jpg');
+}
+
+#page3 .menu-content {
+    background-image: url('menu3.jpg');
+}
+
+.social-link {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    z-index: 3;
+    color: #382218;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-link i {
+    font-size: 1.5rem;
+    margin-left: 5px;
+    color: #e07e37;
+}
+
+@media (max-width: 768px) {
+    .social-link {
+        top: 15px;
+        right: 15px;
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+    
+    .social-link i {
+        font-size: 1.3rem;
+    }
+} 

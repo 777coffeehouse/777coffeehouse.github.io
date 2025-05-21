@@ -1,0 +1,9 @@
+Bu dosya bir yer tutucudur. logo.png yerine 777 Coffee House logosunu yükleyebilirsiniz.
+
+Önerilen görsel:
+- Yuvarlak veya kare şeklinde
+- En az 200x200 piksel boyutlarında
+- PNG formatında (şeffaf arka planlı)
+- Resimdeki logo tasarımına benzer şekilde "777 Coffee House" yazısı ve kahve fincanı figürü içeren bir logo
+
+Logo yüklenemezse, JavaScript otomatik olarak bir logo oluşturacaktır, ancak daha profesyonel bir görünüm için kendi logonuzu yüklemeniz önerilir. 
