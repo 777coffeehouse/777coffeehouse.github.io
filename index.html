@@ -11,11 +11,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Popup Overlay -->
+    <!-- Popup Overlay with Slider -->
     <div id="popup-overlay" class="popup-overlay">
-        <div class="popup-content">
+        <div class="popup-content slider-container">
             <button class="close-btn" onclick="closePopup()">&times;</button>
-            <img src="img/matcha-promotion.jpg" alt="777 Coffee House Matcha Kampanya" class="popup-image">
+            
+            <div class="slider-wrapper">
+                <div class="slider-track" id="slider-track">
+                    <!-- Slide 1 -->
+                    <div class="slide active" data-slide="0">
+                        <div class="slide-card" style="background-color: #FFE5E5;">
+                            <div class="brand-name">777</div>
+                            <div class="slide-image-container">
+                                <img src="img/slide1.jpg" alt="Yeni Tatlı 1" class="slide-image">
+                            </div>
+                            <h2 class="slide-title"> White Cascada </h2>
+                            <p class="slide-description">Bitter çikolatalı, böğürtlen ve akışkan çikolata soslu, üzeri beyaz çikolata ve antep fıstığı kaplamalı.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="slide" data-slide="1">
+                        <div class="slide-card" style="background-color: #FFF4E5;">
+                            <div class="brand-name">777</div>
+                            <div class="slide-image-container">
+                                <img src="img/slide2.jpg" alt="Yeni Tatlı 2" class="slide-image">
+                            </div>
+                            <h2 class="slide-title">Kahve Çekirdeği Tiramisu</h2>
+                            <p class="slide-description">Çikolata tozu, tiramisu dolgusu ve çikolatalı pandispanya kombinasyonu.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="slide" data-slide="2">
+                        <div class="slide-card" style="background-color: #E5F5E5;">
+                            <div class="brand-name">777</div>
+                            <div class="slide-image-container">
+                                <img src="img/slide3.jpg" alt="Yeni Tatlı 3" class="slide-image">
+                            </div>
+                            <h2 class="slide-title">Pistachio (Antep Fıstığı Tatlısı) </h2>
+                            <p class="slide-description"> Antep fıstığı pralin ve kremamsı fıstık dolgusu, Antep fıstığı kaplamalı. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Controls -->
+            <div class="slider-controls">
+                <button class="nav-btn prev-btn" onclick="prevSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="menu-btn" onclick="closePopup()">Menü</button>
+                <button class="nav-btn next-btn" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Slide Indicators -->
+            <div class="slide-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+            </div>
         </div>
     </div>
 
@@ -47,7 +104,17 @@
                     <span class="item-price">220,0₺</span>
                 </div>
                 <div class="menu-item">
-                    <span class="item-name">PARFE + İÇECEK</span>
+                    <span class="item-name">WHITE CASCADA + İÇECEK </span>
+                    <span class="item-dots"></span>
+                    <span class="item-price">220,0₺</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">KAHVE ÇEKİRDEĞİ TİRAMİSU + İÇECEK </span>
+                    <span class="item-dots"></span>
+                    <span class="item-price">220,0₺</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">PISTACHIO + İÇECEK </span>
                     <span class="item-dots"></span>
                     <span class="item-price">220,0₺</span>
                 </div>
@@ -129,7 +196,17 @@
                     <span class="item-price">200,0₺</span>
                 </div>
                 <div class="menu-item">
-                    <span class="item-name">PARFE</span>
+                    <span class="item-name">WHITE CASCADA</span>
+                    <span class="item-dots"></span>
+                    <span class="item-price">200,0₺</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">KAHVE ÇEKİRDEĞİ TİRAMİSU</span>
+                    <span class="item-dots"></span>
+                    <span class="item-price">200,0₺</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">PISTACHIO</span>
                     <span class="item-dots"></span>
                     <span class="item-price">200,0₺</span>
                 </div>
